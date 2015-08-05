@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    div.container
+        fb:login-button(scope="public_profile,user_status,user_relationship_details,user_location,user_likes,user_hometown,user_education_history,user_posts,user_likes,user_friends,user_work_history,user_tagged_places" onlogin="checkLoginState();")
+        div(id="status")
+        div
+            button(onclick="generateAnimal()" id='animalButton' style="visibility: hidden;") Generate Spirit Animal
+        h3 Openness
+        div(class="progress")
+            div(class="progress-bar" id="openBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;") 
+        h3 Extraversion
+        div(class="progress")
+            div(class="progress-bar" id="extBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;") 
+        h3 Conscientiousness
+        div(class="progress")
+            div(class="progress-bar" id="conBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;") 
+        h3 Agreeableness
+        div(class="progress")
+            div(class="progress-bar" id="agreeBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;")
+        h3 Neuroticism
+        div(class="progress")
+            div(class="progress-bar" id="neuroBar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;")
+    script(src="/javascripts/fb.js")

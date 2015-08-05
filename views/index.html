@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Facebook Spirit Animal</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="./fb.js"></script>
+
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+<fb:login-button scope="public_profile,user_status,user_relationship_details,user_location,user_likes,user_hometown,user_education_history,user_posts,user_likes,user_friends,user_work_history,user_tagged_places" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
+</div>
+<div>
+    <button onclick="generateAnimal()" id='animalButton' style="visibility: hidden;">Generate Spirit Animal</button>
+</div>
+
+</body>
+</html>
