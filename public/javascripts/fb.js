@@ -62,6 +62,7 @@ function statusChangeCallback(response) {
     });
   }
   var bigFive = {};
+  var MBTItype = '';
     function getPosts(response) {
         posts = [];
         console.log(response);
@@ -79,11 +80,40 @@ function statusChangeCallback(response) {
             success: function(data) {
                 console.log(data);
                 bigFive = data;
+                var IE, FT, JP, SN;
+                if (bigFive.conscientiousness > 50) {
+                    JP = "J";
+                } else {
+                    JP = "P";
+                }    
+
+                if (bigFive.extraversion > 50) {
+                    IE = "E";
+                } else {
+                    IE = "I";
+                }    
+                 
+                if ((bigFive.agreeableness + bigFive.openness) > 140) {
+                    FT = "F";
+                } else {
+                    FT = "T";
+                }    
+                
+                if (bigFive.openness > 50) {
+                    SN = "N";
+                } else {
+                    SN = "S";
+                }
+                
+                var MBTItype = IE + SN + FT +JP;
+                console.log(MBTItype);
+
                 $('#openBar').css('width', bigFive.openness+'%').attr('aria-valuenow', bigFive.openness); 
                 $('#agreeBar').css('width', bigFive.agreeableness+'%').attr('aria-valuenow', bigFive.agreeableness); 
                 $('#neuroBar').css('width', bigFive.neuroticism+'%').attr('aria-valuenow', bigFive.neuroticism); 
                 $('#extBar').css('width', bigFive.extraversion+'%').attr('aria-valuenow', bigFive.extraversion); 
                 $('#conBar').css('width', bigFive.conscientiousness+'%').attr('aria-valuenow', bigFive.conscientiousness); 
+                searchImage(personalities[MBTItype].animal[0]);
             }
         });
     }
