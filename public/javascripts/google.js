@@ -37,7 +37,7 @@ function searchImage(image) {
     imageSearch.setSearchCompleteCallback(this, searchComplete, null);
 
     // Find me a beautiful car.
-    imageSearch.execute(image+ "Spirit");
+    imageSearch.execute(image);
 
     // Include the required Google branding
     google.search.Search.getBranding('branding');

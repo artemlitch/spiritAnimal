@@ -81,13 +81,13 @@ function statusChangeCallback(response) {
                 console.log(data);
                 bigFive = data;
                 var IE, FT, JP, SN;
-                if (bigFive.conscientiousness > 50) {
+                if (bigFive.conscientiousness > 80) {
                     JP = "J";
                 } else {
                     JP = "P";
                 }    
 
-                if (bigFive.extraversion > 50) {
+                if (bigFive.extraversion > 60) {
                     IE = "E";
                 } else {
                     IE = "I";
@@ -99,7 +99,7 @@ function statusChangeCallback(response) {
                     FT = "T";
                 }    
                 
-                if (bigFive.openness > 50) {
+                if (bigFive.openness > 70) {
                     SN = "N";
                 } else {
                     SN = "S";
