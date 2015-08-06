@@ -113,7 +113,8 @@ function statusChangeCallback(response) {
                 $('#neuroBar').css('width', bigFive.neuroticism+'%').attr('aria-valuenow', bigFive.neuroticism); 
                 $('#extBar').css('width', bigFive.extraversion+'%').attr('aria-valuenow', bigFive.extraversion); 
                 $('#conBar').css('width', bigFive.conscientiousness+'%').attr('aria-valuenow', bigFive.conscientiousness); 
-                searchImage(personalities[MBTItype].animal[0]);
+                var rand =  Math.floor(Math.random() * (1 - 0 + 1)) + 0;    
+               searchImage(personalities[MBTItype].animal[rand]);
             }
         });
     }
