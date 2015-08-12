@@ -400,10 +400,6 @@ var neuroticism =
     "neu":-0.044324,
     "p":2.36e-27
   },
-  "": {
-    "neu":null,
-    "p":null
-  },
   "lets get": {
     "neu":0.0241,
     "p":0.00000148

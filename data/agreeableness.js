@@ -292,10 +292,6 @@ var agreeableness =
     "agr":-0.040875,
     "p":5.54e-24
   },
-  "*": {
-    "agr":-0.040701,
-    "p":1.57e-23
-  },
   "smoke": {
     "agr":-0.040652,
     "p":1.06e-23
@@ -399,10 +395,6 @@ var agreeableness =
   "retarded": {
     "agr":-0.03738,
     "p":2.03e-19
-  },
-  "": {
-    "agr":null,
-    "p":null
   },
   "birthday wishes !": {
     "agr":0.036052,
@@ -639,10 +631,6 @@ var agreeableness =
   "had a wonderful": {
     "agr":0.042606,
     "p":2.42e-25
-  },
-  ":)": {
-    "agr":0.042709,
-    "p":1.82e-24
   },
   "pray": {
     "agr":0.043811,
